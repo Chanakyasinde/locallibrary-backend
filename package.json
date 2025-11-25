@@ -1,0 +1,24 @@
+{
+  "name": "locallibrary-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chanakyasinde/locallibrary-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chanakyasinde/locallibrary-backend/issues"
+  },
+  "homepage": "https://github.com/Chanakyasinde/locallibrary-backend#readme",
+  "dependencies": {
+    "@prisma/client": "^5.16.0",
+    "prisma": "^5.16.0"
+  }
+}
