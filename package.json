@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Chanakyasinde/locallibrary-backend#readme",
   "dependencies": {
     "@prisma/client": "^5.16.0",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "prisma": "^5.16.0"
   }
