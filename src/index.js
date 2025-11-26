@@ -41,6 +41,17 @@ app.get("/api/v1/genres/:id", async (req, res) => {
   res.status(200).json(genre);
 })
 
+app.patch("/api/v1/genres/:id", async (req, res) => {
+  const id = parseInt(req.params.id);
+  await prisma.genre.update({
+    where: {
+      id
+    },
+    data: req.body
+  })
+
+  return res.status(200).send("OK");
+})
 
 app.listen(3001, (req, res) => {
     console.log("Server started on port 3001");
