@@ -27,6 +27,21 @@ app.get("/api/v1/genres", async (req, res) => {
   return res.status(200).json(genres);
 })
 
+app.get("/api/v1/genres/:id", async (req, res) => {
+  const id = parseInt(req.params.id);
+  const genre = await prisma.genre.findUnique({
+    where: {
+      id
+    }
+  })
+
+  if (!genre) {
+    return res.status(404).json({ error: "Genre with the given id does not exist" })
+  }
+  res.status(200).json(genre);
+})
+
+
 app.listen(3001, (req, res) => {
     console.log("Server started on port 3001");
 })
